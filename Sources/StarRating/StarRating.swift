@@ -60,3 +60,18 @@ public struct RatingView: View {
         }
     }
 }
+
+@available(iOS 16, *)
+fileprivate struct PreviewWrapper: View {
+    @State private var rating: Double?
+    var body: some View {
+        RatingView(rating: $rating)
+    }
+}
+
+@available(iOS 16, *)
+struct Previews: PreviewProvider {
+    static var previews: some View {
+        PreviewWrapper()
+    }
+}
