@@ -7,7 +7,7 @@
 import SwiftUI
 
 @available(iOS 16, *)
-public struct RatingView: View {
+public struct StarRatingView: View {
     
     let size: Double
     let color: Color
@@ -65,7 +65,7 @@ public struct RatingView: View {
 fileprivate struct PreviewWrapper: View {
     @State private var rating: Double?
     var body: some View {
-        RatingView(rating: $rating)
+        StarRatingView(rating: $rating)
     }
 }
 
